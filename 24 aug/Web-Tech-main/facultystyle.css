@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #222;
+}
+
+
+/* =========================
+   DEPARTMENT HEADER
+========================= */
+
+header {
+    text-align: center;
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background-color: #142b44;
+
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 8px 15px;
+}
+
+.navbar a:hover {
+    background-color: #4d79a8;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+main {
+    width: 90%;
+
+    margin: 40px auto;
+}
+
+.section-title {
+    text-align: center;
+
+    color: #1e3a5f;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FACULTY CARDS
+========================= */
+
+.faculty-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Faculty Card */
+
+.faculty-card {
+    position: relative;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.faculty-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Faculty Photo */
+
+.faculty-card img {
+    width: 130px;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #1e3a5f;
+
+    margin-bottom: 15px;
+}
+
+
+/* Faculty Name */
+
+.faculty-card h3 {
+    color: #1e3a5f;
+
+    margin: 8px 0;
+}
+
+
+/* Designation */
+
+.designation {
+    color: #666;
+
+    font-weight: bold;
+}
+
+
+/* HOD Badge */
+
+.hod-badge {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    background-color: #d62828;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 15px;
+
+    font-size: 11px;
+}
+
+
+/* Profile Button */
+
+.faculty-card button {
+    margin-top: 10px;
+
+    padding: 10px 20px;
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.faculty-card button:hover {
+    background-color: #4d79a8;
+}
+
+
+/* =========================
+   RESEARCH SECTION
+========================= */
+
+.research-section {
+    margin-top: 50px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+}
+
+.research-section h2 {
+    text-align: center;
+
+    color: #1e3a5f;
+
+    margin-bottom: 25px;
+}
+
+
+/* Research Grid */
+
+.research-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.research-grid div {
+    padding: 20px;
+
+    background-color: #f1f5f9;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.research-grid h3 {
+    color: #1e3a5f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .faculty-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .faculty-container {
+        grid-template-columns: 1fr;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}

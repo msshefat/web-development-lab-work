@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="dashboardstyle.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>Student Portal</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Courses</a>
+        <a href="#">Results</a>
+        <a href="#">Attendance</a>
+        <a href="#">Notices</a>
+        <a href="#">Logout</a>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+
+            <h2>Dashboard</h2>
+
+            <div class="nav-right">
+
+                <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="theme-icon">☾</span>
+                    <span class="theme-label">Dark mode</span>
+                </button>
+
+                <span class="notification">
+                    🔔
+                    <b class="notification-badge">3</b>
+                </span>
+
+                <span>Nishat Niha</span>
+
+            </div>
+
+        </nav>
+
+
+        <!-- Student Profile -->
+        <section class="profile">
+
+            <div>
+
+                <h1>Welcome, Nishat Niha!</h1>
+
+                <p>
+                    Student ID: 24549010024
+                </p>
+
+                <p>
+                    Department: Information and Communication Technology
+                </p>
+
+            </div>
+
+            <img src="c:\Users\user\Documents\niha.jpg" alt="Nishat Niha">
+
+        </section>
+
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-grid">
+
+            <!-- GPA -->
+            <div class="card">
+
+                <h3>GPA</h3>
+
+                <p class="big-number">3.75</p>
+
+                <p>Current GPA</p>
+
+            </div>
+
+
+            <!-- Attendance -->
+            <div class="card">
+
+                <h3>Attendance</h3>
+
+                <p class="big-number">100%</p>
+
+                <p>Overall Attendance</p>
+
+            </div>
+
+
+            <!-- Current Courses -->
+            <div class="card">
+
+                <h3>Current Courses</h3>
+
+                <ul>
+                    <li>Web Development</li>
+                    <li>Database Management</li>
+                    <li>Computer Networks</li>
+                    <li>Software Engineering</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Notices -->
+            <div class="card notice-card">
+
+                <span class="notice-badge">2</span>
+
+                <h3>Notices</h3>
+
+                <p>Midterm examination schedule published.</p>
+
+                <p>Course registration deadline announced.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Examination Results -->
+        <section class="results">
+
+            <h2>Examination Results</h2>
+
+
+            <!-- Course 1 -->
+            <div class="course passed">
+
+                <div>
+                    <h3>Web Technology</h3>
+                    <p>Grade: A+</p>
+                </div>
+
+                <span>Passed</span>
+
+            </div>
+
+
+            <!-- Course 2 -->
+            <div class="course passed">
+
+                <div>
+                    <h3>Database Management</h3>
+                    <p>Grade: A+</p>
+                </div>
+
+                <span>Passed</span>
+
+            </div>
+
+
+            <!-- Course 3 -->
+            <div class="course passed">
+
+                <div>
+                    <h3>Computer Networks</h3>
+                    <p>Grade: A+</p>
+                </div>
+
+                <span>Passed</span>
+
+            </div>
+
+
+            <!-- Course 4 -->
+            <div class="course passed">
+
+                <div>
+                    <h3>Software Engineering</h3>
+                    <p>Grade: A+</p>
+                </div>
+
+                <span>Passed</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>© 2026 Student Dashboard</p>
+
+            <p>University Student Portal</p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- Fixed Notification Button -->
+    <a href="#" class="top-button">↑</a>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+        const themeLabel = themeToggle.querySelector('.theme-label');
+
+        function setTheme(isDark) {
+            document.body.classList.toggle('dark-mode', isDark);
+            themeToggle.setAttribute('aria-pressed', isDark);
+            themeIcon.textContent = isDark ? '☀' : '☾';
+            themeLabel.textContent = isDark ? 'Light mode' : 'Dark mode';
+            localStorage.setItem('dashboard-theme', isDark ? 'dark' : 'light');
+        }
+
+        setTheme(localStorage.getItem('dashboard-theme') === 'dark');
+        themeToggle.addEventListener('click', () => setTheme(!document.body.classList.contains('dark-mode')));
+    </script>
+</body>
+</html>

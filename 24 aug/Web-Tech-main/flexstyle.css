@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+    background-color: lightgray;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
